@@ -477,7 +477,7 @@ export const social = [
   {
     label: "WhatsApp",
     value: "+234 704 359 3355",
-    href: `https://wa.me/2348023349218?text=${encodeURIComponent(
+    href: `https://wa.me/2347043593355?text=${encodeURIComponent(
       "Hello, I need your services",
     )}`,
     icon: WhatsApp,
