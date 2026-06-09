@@ -31,8 +31,8 @@ const RightContent = () => {
           </p>
           <p className="text-base leading-relaxed text-text-secondary">
             I&apos;m currently studying Microbiology at the University of Lagos
-            while actively taking on freelance and contract work, proof that
-            curiosity doesn&apos;t stay in one lane.
+            while actively taking on full-time. freelance and contract work,
+            proof that curiosity doesn&apos;t stay in one lane.
           </p>
           <p className="text-base leading-relaxed text-text-secondary">
             I care deeply about clean architecture, reusable abstractions and

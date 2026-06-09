@@ -15,6 +15,8 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
 
+  console.log(activeSection);
+
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", handleScroll);
@@ -23,32 +25,39 @@ const Navbar = () => {
 
   // Active section tracking
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        let visibleSection = "";
+    const sections = links
+      .map(({ href }) => document.querySelector(href))
+      .filter(Boolean);
 
-        // Find the section with the highest intersection ratio
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
-            // You can also compare ratios if multiple are visible
-            visibleSection = entry.target.id;
-          }
-        });
+    const handleScroll = () => {
+      const viewportCenter = window.innerHeight / 2;
 
-        setActiveSection(visibleSection); // Will be "" if none visible
-      },
-      {
-        threshold: 0.4,
-        rootMargin: "-80px 0px -20% 0px", // Helps with top section behavior
-      },
-    );
+      let closestSection = "";
+      let smallestDistance = Infinity;
 
-    links.forEach(({ href }) => {
-      const el = document.querySelector(href);
-      if (el) observer.observe(el);
-    });
+      sections.forEach((section) => {
+        const rect = section!.getBoundingClientRect();
 
-    return () => observer.disconnect();
+        const sectionCenter = rect.top + rect.height / 2;
+
+        const distance = Math.abs(viewportCenter - sectionCenter);
+
+        if (distance < smallestDistance) {
+          smallestDistance = distance;
+          closestSection = section!.id;
+        }
+      });
+
+      setActiveSection(closestSection);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const handleNav = (href: string) => {

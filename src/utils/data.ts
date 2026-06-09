@@ -23,6 +23,7 @@ export const STACK = [
   "Next.js",
   "Node.js",
   "React Native",
+  "Expo",
   "Tailwind CSS",
   "Chakra UI",
   "RTK Query",
@@ -41,7 +42,6 @@ export const stats = [
 export const facts = [
   { icon: "📍", text: "Lagos, Nigeria" },
   { icon: "🎓", text: "Microbiology, UNILAG" },
-  { icon: "📱", text: "Learning React Native" },
 ];
 
 export const socials = [
@@ -154,7 +154,7 @@ export const experiences: Experience[] = [
     current: false,
     bullets: [
       "Designed and built a full production website for a Lagos-based HVAC engineering company",
-      "Implemented multi-page Next.js app with Chakra UI v3, Framer Motion animations and dark/light theming",
+      "Implemented multi-page Next.js app with Chakra UI v3, Framer Motion animations",
       "Integrated Resend for transactional email and set up custom domain, DNS and deployment on Vercel",
       "Built reusable component library covering navbar, hero, services, about, projects gallery with lightbox and contact form",
     ],
@@ -194,7 +194,7 @@ export const experiences: Experience[] = [
       "Developed responsive, accessible and user-friendly interfaces for public-facing use",
       "Worked closely with the client to meet functional requirements under strict timelines",
     ],
-    stack: ["React", "TypeScript", "Tailwind CSS"],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
     id: 4,
@@ -209,7 +209,7 @@ export const experiences: Experience[] = [
       "Balanced academic responsibilities alongside professional development work",
       "Strengthened skills in time management, problem-solving and real-world product development",
     ],
-    stack: ["React", "TypeScript", "Next.js"],
+    stack: ["React", "TypeScript", "Next.js", "Chakra UI", "Tailwind CSS"],
   },
   {
     id: 5,
@@ -399,6 +399,7 @@ export const projects: Project[] = [
       "Redis",
       "Cloudinary",
     ],
+    live: "https://n-vora-frontend.vercel.app/auth/login",
     featured: false,
     status: "in-progress",
     highlights: [

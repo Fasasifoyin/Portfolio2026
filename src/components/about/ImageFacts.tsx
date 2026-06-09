@@ -3,6 +3,7 @@
 import { facts } from "@/utils/data";
 import { containerVariants, itemVariants } from "@/utils/framerVariants";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const ImageFacts = () => {
   return (
@@ -13,15 +14,16 @@ const ImageFacts = () => {
       viewport={{ once: true, margin: "-60px" }}
       className="flex flex-col gap-6"
     >
-      <div className="relative w-full aspect-4/5 max-w-sm rounded-2xl overflow-hidden border border-border">
-        {/* Replace with your actual photo */}
-        {/* <Image
-                    src="/foyin.jpg"
-                    alt="Fasasi Foyin"
-                    fill
-                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                    // fallback handled below
-                  /> */}
+      <div className="group relative w-full aspect-4/5 max-w-sm rounded-2xl overflow-hidden border border-border">
+        {" "}
+        <Image
+          src="/MyImage.webp"
+          alt="Fasasi Foyin"
+          fill
+          sizes="(max-width: 640px) 100vw, 384px"
+          priority
+          className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+        />
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}

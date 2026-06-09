@@ -24,7 +24,7 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://foyin.dev"), // ← update to your real domain
+  metadataBase: new URL("https://foyin.dev"),
   title: {
     default: "Foyin Fasasi — Frontend Developer",
     template: "%s | Foyin Fasasi",
@@ -71,6 +71,13 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://foyin.dev",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/favicon-512.png", sizes: "512x512" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
 };
 
