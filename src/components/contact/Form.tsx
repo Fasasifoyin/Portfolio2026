@@ -33,14 +33,24 @@ const Form = () => {
     setError(null);
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+          name: form.name,
+          phone: form.phone || "",
+          email: form.email,
+          subject: form.subject || `Portfolio message from ${form.name}`,
+          message: form.message,
+        }),
       });
 
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Failed");
+      console.log(data)
+      if (!data.success) {
+        throw new Error(data.error || "Failed");
+      }
 
       setSubmitted(true);
       setForm({ name: "", phone: "", email: "", subject: "", message: "" });
