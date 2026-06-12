@@ -1,7 +1,7 @@
 "use client";
 
 import { itemVariants } from "@/utils/framerVariants";
-import { FormState, Status } from "@/utils/types";
+import { FormState } from "@/utils/types";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import ContactInput from "../form/ContactInput";
