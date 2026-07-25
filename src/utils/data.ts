@@ -344,7 +344,7 @@ export const projects: Project[] = [
       "Next.js",
       "Redux Toolkit Query",
       "Tailwind CSS",
-      "Shadcn"
+      "Shadcn",
       "Google Auth",
       "Paystack",
     ],
