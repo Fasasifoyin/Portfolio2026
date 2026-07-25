@@ -341,9 +341,10 @@ export const projects: Project[] = [
     longDescription:
       "Designed and developed the full frontend based on product requirements. Built reusable component architecture, implemented Google OAuth and Paystack payments, and structured the project for future scalability.",
     stack: [
-      "React",
+      "Next.js",
       "Redux Toolkit Query",
-      "Chakra UI",
+      "Tailwind CSS",
+      "Shadcn"
       "Google Auth",
       "Paystack",
     ],
