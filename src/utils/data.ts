@@ -259,6 +259,33 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   {
     id: 1,
+    name: "Cliqss",
+    description:
+      "Frontend application built from scratch with Google auth and Paystack payment integration.",
+    longDescription:
+      "Designed and developed the full frontend based on product requirements. Built reusable component architecture, implemented Google OAuth and Paystack payments, and structured the project for future scalability.",
+    stack: [
+      "Next.js",
+      "Redux Toolkit Query",
+      "Tailwind CSS",
+      "Shadcn",
+      "Google Auth",
+      "Paystack",
+    ],
+    live: "https://cliqss.com",
+    featured: true,
+    status: "live",
+    highlights: [
+      "Google OAuth integration",
+      "Paystack payments",
+      "Reusable component system",
+      "Production-ready delivery",
+    ],
+    icon: "⚡",
+    color: "#EC4899",
+  },
+  {
+    id: 2,
     name: "SayFoods",
     description:
       "Fullstack e-commerce marketplace for buying and selling food items with Paystack payment integration.",
@@ -287,7 +314,7 @@ export const projects: Project[] = [
     color: "#6366F1",
   },
   {
-    id: 2,
+    id: 3,
     name: "Kenbis Technologies",
     description:
       "Full production website for a Lagos-based HVAC engineering company — built and deployed end-to-end.",
@@ -314,14 +341,14 @@ export const projects: Project[] = [
     color: "#F59E0B",
   },
   {
-    id: 3,
+    id: 4,
     name: "Backyard",
     description:
       "Frontend for an automobile marketplace platform — responsive pages for dealers and buyers.",
     longDescription:
       "Built the frontend for an upcoming car marketplace. Built responsive product listing pages, dealer dashboards and buyer flows with RTK Query for API communication and a focus on performance.",
-    stack: ["React", "RTK Query", "Chakra UI"],
-    live: "https://www.checkbackyard.com/",
+    stack: ["Next.js", "RTK Query", " Tailwind CSS", "Shadcn"],
+    live: "https://www.bakyaad.com/",
     featured: true,
     status: "live",
     highlights: [
@@ -332,33 +359,6 @@ export const projects: Project[] = [
     ],
     icon: "🚗",
     color: "#06B6D4",
-  },
-  {
-    id: 4,
-    name: "Cliqss",
-    description:
-      "Frontend application built from scratch with Google auth and Paystack payment integration.",
-    longDescription:
-      "Designed and developed the full frontend based on product requirements. Built reusable component architecture, implemented Google OAuth and Paystack payments, and structured the project for future scalability.",
-    stack: [
-      "Next.js",
-      "Redux Toolkit Query",
-      "Tailwind CSS",
-      "Shadcn",
-      "Google Auth",
-      "Paystack",
-    ],
-    live: "https://cliqss.com",
-    featured: true,
-    status: "live",
-    highlights: [
-      "Google OAuth integration",
-      "Paystack payments",
-      "Reusable component system",
-      "Production-ready delivery",
-    ],
-    icon: "⚡",
-    color: "#EC4899",
   },
   {
     id: 5,
