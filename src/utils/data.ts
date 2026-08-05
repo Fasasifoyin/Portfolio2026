@@ -342,7 +342,7 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    name: "Backyard",
+    name: "Bakyaad",
     description:
       "Frontend for an automobile marketplace platform — responsive pages for dealers and buyers.",
     longDescription:
